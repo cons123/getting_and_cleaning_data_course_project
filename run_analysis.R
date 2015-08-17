@@ -12,6 +12,7 @@ library(plyr)
 ## g_data_x_files: filenames for observation data in test and training data
 ## g_data_y_files: filenames for activity data in test and training data
 ## g_output_pdata_filename: filename for tidy dataset csv output file
+## g_output_pdata_head_filename: filename for tidy dataset csv output file
 ## g_output_sdata_filename: filename for summary dataset csv output file  
 
 g_dataset_remote_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -23,6 +24,7 @@ g_data_x_files <-c("test/X_test.txt","train/X_train.txt")
 g_data_y_files <-c("test/y_test.txt","train/y_train.txt")
 
 g_output_pdata_filename <- "pdata_output.csv"
+g_output_pdata_head_filename <- "pdata_output.head.csv"
 g_output_sdata_filename <- "sdata_output.csv"
 
 
@@ -116,5 +118,6 @@ setwd("..")
 sdata <- summarize_data(pdata)
 ##  generate output CSV files
 write.csv(pdata, file = g_output_pdata_filename)
+write.csv(head(pdata,100), file = g_output_pdata_head_filename)
 write.csv(sdata, file = g_output_sdata_filename)
 
