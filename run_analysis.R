@@ -23,9 +23,9 @@ g_data_subject_files <-c("test/subject_test.txt","train/subject_train.txt")
 g_data_x_files <-c("test/X_test.txt","train/X_train.txt")
 g_data_y_files <-c("test/y_test.txt","train/y_train.txt")
 
-g_output_pdata_filename <- "pdata_output.csv"
-g_output_pdata_head_filename <- "pdata_output.head.csv"
-g_output_sdata_filename <- "sdata_output.csv"
+g_output_pdata_filename <- "pdata_output.csv.txt"
+g_output_pdata_head_filename <- "pdata_output.head.csv.txt"
+g_output_sdata_filename <- "sdata_output.csv.txt"
 
 
 ## function: acquire_data
