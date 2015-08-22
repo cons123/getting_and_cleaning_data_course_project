@@ -117,7 +117,7 @@ setwd("..")
 ##  generate second dataset with summary info
 sdata <- summarize_data(pdata)
 ##  generate output CSV files
-write.csv(pdata, file = g_output_pdata_filename)
-write.csv(head(pdata,100), file = g_output_pdata_head_filename)
-write.csv(sdata, file = g_output_sdata_filename)
+write.csv(pdata, file = g_output_pdata_filename,row.names = FALSE)
+write.csv(head(pdata,100), file = g_output_pdata_head_filename,row.names = FALSE)
+write.csv(sdata, file = g_output_sdata_filename,row.names = FALSE)
 
